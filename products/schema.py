@@ -2,6 +2,10 @@ import graphene
 from graphene_django.types import DjangoObjectType
 from .models import Product
 
+from graphene_plugin import patch_object_type
+
+patch_object_type()
+
 class ProductType(DjangoObjectType):
     class Meta:
         model = Product

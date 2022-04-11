@@ -1,6 +1,9 @@
 import graphene
 from graphene_django.types import DjangoObjectType
 from .models import Snippet
+from graphene_plugin import patch_object_type
+
+patch_object_type()
 
 class SnippetType(DjangoObjectType):
     class Meta:
